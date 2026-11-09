@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUREX Esports | Official Clan Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">AUREX <span>ESPORTS</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#divisions">Divisions</a></li>
+            <li><a href="#roster">Roster</a></li>
+            <li><a href="#apply" class="btn-nav">Tryouts</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <p class="tagline">DOMINATE THE ARENA</p>
+            <h1>WE ARE <span class="gold-text">AUREX</span></h1>
+            <p class="subtitle">Competitive Gaming Organization competing across Blood Strike, PUBG, Valorant, and Fortnite.</p>
+            <div class="hero-buttons">
+                <a href="#apply" class="btn-primary">Join the Clan</a>
+                <a href="#divisions" class="btn-secondary">Explore Divisions</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Game Divisions -->
+    <section id="divisions" class="section">
+        <h2 class="section-title">ACTIVE <span class="gold-text">DIVISIONS</span></h2>
+        <div class="grid-container">
+            <div class="card">
+                <div class="card-badge">MOBILE / PC</div>
+                <h3>BLOOD STRIKE</h3>
+                <p>Fast-paced tactical strikers dominating ranked lobbies and regional scrims.</p>
+            </div>
+            <div class="card">
+                <div class="card-badge">BATTLE ROYALE</div>
+                <h3>PUBG</h3>
+                <p>Precision squad rotations, high-kill games, and competitive tournament play.</p>
+            </div>
+            <div class="card">
+                <div class="card-badge">TACTICAL FPS</div>
+                <h3>VALORANT</h3>
+                <p>Calculated strategies, sharp aim, and relentless site execution.</p>
+            </div>
+            <div class="card">
+                <div class="card-badge">ZERO BUILD / BUILD</div>
+                <h3>FORTNITE</h3>
+                <p>Elite box-fighting mechanics and stacked endgame dominance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Roster Filter -->
+    <section id="roster" class="section dark-bg">
+        <h2 class="section-title">PRO <span class="gold-text">ROSTER</span></h2>
+        
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-game="all">All Games</button>
+            <button class="filter-btn" data-game="bloodstrike">Blood Strike</button>
+            <button class="filter-btn" data-game="pubg">PUBG</button>
+            <button class="filter-btn" data-game="valorant">Valorant</button>
+            <button class="filter-btn" data-game="fortnite">Fortnite</button>
+        </div>
+
+        <div class="roster-grid" id="roster-grid">
+            <div class="player-card" data-game="bloodstrike">
+                <span class="game-tag">BLOOD STRIKE</span>
+                <h3>AX_Viper</h3>
+                <p>Entry Fragger / Captain</p>
+            </div>
+            <div class="player-card" data-game="pubg">
+                <span class="game-tag">PUBG</span>
+                <h3>AX_Ghost</h3>
+                <p>IGL / Sniper</p>
+            </div>
+            <div class="player-card" data-game="valorant">
+                <span class="game-tag">VALORANT</span>
+                <h3>AX_Kairo</h3>
+                <p>Duelist Main</p>
+            </div>
+            <div class="player-card" data-game="fortnite">
+                <span class="game-tag">FORTNITE</span>
+                <h3>AX_Zenith</h3>
+                <p>Fragger / Builder</p>
+            </div>
+            <div class="player-card" data-game="valorant">
+                <span class="game-tag">VALORANT</span>
+                <h3>AX_Nova</h3>
+                <p>Controller / Flex</p>
+            </div>
+            <div class="player-card" data-game="bloodstrike">
+                <span class="game-tag">BLOOD STRIKE</span>
+                <h3>AX_Raze</h3>
+                <p>Support / Rusher</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tryout Application Form -->
+    <section id="apply" class="section">
+        <h2 class="section-title">CLAN <span class="gold-text">TRYOUTS</span></h2>
+        <div class="form-container">
+            <form id="tryout-form">
+                <div class="input-group">
+                    <label>In-Game Name (IGN)</label>
+                    <input type="text" id="ign" placeholder="e.g., ShadowKiller99" required>
+                </div>
+                <div class="input-group">
+                    <label>Discord Username</label>
+                    <input type="text" id="discord" placeholder="e.g., shadow#0001 or @shadow" required>
+                </div>
+                <div class="input-group">
+                    <label>Select Game Division</label>
+                    <select id="game-select" required>
+                        <option value="Blood Strike">Blood Strike</option>
+                        <option value="PUBG">PUBG</option>
+                        <option value="Valorant">Valorant</option>
+                        <option value="Fortnite">Fortnite</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Current Rank / K/D Ratio</label>
+                    <input type="text" id="rank" placeholder="e.g., Legend / 3.4 KD" required>
+                </div>
+                <button type="submit" class="btn-primary full-width">Submit Application</button>
+            </form>
+            <div id="form-message" class="hidden"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 AUREX ESPORTS. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
